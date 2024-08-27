@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact</title>
+</head>
+
+<body><!-- si l'aspect de TOUTE la page doit changer via CSS, est-ce qu'il ne faudrait pas appliquer une class -->
+    <div class="left left--contact">
+        <header>
+            <a href="index.html">
+                <img class="left__logo" src="../images/onews.svg" />
+                <h1 class="left__title">O'CLOCK STUDENT NEWS</h1>
+            </a>
+        </header>
+        <main>
+            <h2>Say a word <em>contact us</em></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, eum. Enim vel velit fugiat obcaecati
+                dolores asperiores, vitae impedit, explicabo quia accusantium similique iusto ipsum est?</p>
+        </main>
+        <nav>
+            <a href="#">Plan de site</a>
+            <a href="#">Mentions légales</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="right">
+        <h2 class="right__title">Contact</h2>
+        <section id="contact">
+            <!-- Un élément form (=> formulaire) est une balise qui entoure TOUT le formulaire -->
+            <!-- l'id du formulaire permettra à terme de le traiter en JS -->
+            <!-- 
+                - action permet d'indiquer la page vers laquelle il y aura un traitement (on verra plus tard),
+                - method utilisée : get/post (get : permet d'envoyer les infos dans l'url au serveur, post permet d'envoyer les informations de façon cachées au serveur)
+            -->
+            <form id="form" action="">
+                <!-- il faudrait pouvoir grouper ces champs car ils traitent du même sujet -->
+                <!-- et "étiqueter" ce groupe : Identité -->
+                <div class="form-row">
+                    <p class="label">Je suis</p>
+                    <div class="input-group">
+                        <!-- ici, un petit bouton "switch" (l'un ou l'autre), celui-là serait coché par défaut -->
+                        <input type="radio" id="civilite-2" name="civilite" value="femme" />
+                        <!-- Le label est un champs qui permet de mettre un titre avant un champs à afficher (après pour les checkbox) -->
+                        <label for="civilite-2">une femme</label>
+                        <span>/</span>
+                        <!-- là, le deuxième -->
+                        <input type="radio" id="civilite-1" name="civilite" value="homme" />
+                        <label for="civilite-1">un homme</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="label" for="prenom">Mon prénom est </label>
+                    <!-- un champ texte tout bidon, mais avec Prénom écrit dedans -->
+                    <input type="text" id="prenom" name="prenom" placeholder="Mon prénom" />
+                </div>
+                <div class="form-row">
+                    <label class="label" for="nom">Et mon nom, </label>
+                    <!-- le même, avec Nom dedans -->
+                    <input type="text" id="nom" name="nom" placeholder="Mon nom" />
+                </div>
+                <div class="form-row">
+                    <label class="label" for="source">J'ai connu ce site grâce à </label>
+                    <!-- là, une petite liste de sources, mais faut pas que ça prenne trop de place, elle pourrait évoluer avec le temps -->
+                    <select id="source" name="source">
+                        <!-- ici je place une liste d'options -->
+                        <option value="google">Google</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitch">Twitch</option>
+                        <option value="X">X</option>
+                    </select>
+                </div>
+                <!-- </groupe de champs> -->
+                <!-- deuxième groupe de champs : celui du message -->
+                <!-- Idem, un petit libellé pour guider l'utilisateur 👌 -->
+                <div class="form-row">
+                    <label class="label" for="email">Répondez-moi via</label>
+                    <!-- un champ pour l'adresse e-mail (mais vraiment pour une adresse e-mail, faut pas qu'on puisse rentrer n'importe quoi dedans) -->
+                    <input type="email" id="email" name="email" placeholder="Mon email" />
+                </div>
+                <div class="form-row">
+                    <label class="label" for="message">Je voulais vous dire que</label>
+                    <!-- une belle zone de texte pour pouvoir nous écrire tout un roman 😍 -->
+                    <textarea id="message" name="message" placeholder="Mon message ..." cols="50" rows="20"></textarea>
+                </div>
+                <div class="form-row">
+                    <label class="label" for="file">Et vous montrer ça aussi</label>
+                    <!-- il parait qu'on peut envoyer des fichiers, make it happen -->
+                    <input type="file" id="file" name="file" />
+                </div>
+                <!-- </groupe de champs> -->
+                <!-- Là, c'est plus pour la distinction visuelle mais faudrait aussi créer un groupe... de 1 🤷 -->
+                <div class="form-row">
+                    <label class="label" for="info">Je certifie la véracité de ces informations.</label>
+                    <!-- là, une cochette -->
+                    <div>
+                        <input type="checkbox" id="info" name="info" /> Oui
+                    </div>
+                </div>
+                <!-- </groupe de champs> -->
+                <!-- un bouton pour envoyer le tout -->
+                <button>Envoyer le formulaire</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
